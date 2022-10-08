@@ -1,0 +1,70 @@
+.topNav
+{
+    background-color: #edb9e0;
+    width: 100%;
+    position: sticky;
+    align-items: center;
+    display: flex;
+    height: 50px;
+    font-family: 'Nunito Sans', sans-serif;
+    z-index: 100;
+}
+
+.topCenter
+{
+    flex: 6;
+}
+
+.topPfpImg {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.topRight, .topLeft
+{
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.topNavList {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navListItem {
+    margin-right: 20px;
+    font-size: 18px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.navListItem.Home {
+    color: #ff0000;
+}
+
+.navListItem.About {
+    color: #ff0000;
+}
+
+.navListItem.Contact {
+    color: #ff0000;
+}
+
+.navListItem.Post {
+    color: #ff0000;
+}
+
+.navListItem.CreateAccount {
+    color: #ff0000;
+}
+
+.navListItem.Logout {
+    color: #ff0000;
+}

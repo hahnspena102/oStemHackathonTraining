@@ -1,0 +1,30 @@
+.header {
+    margin-top: 60px;
+}
+
+.headerTitles {
+    font-family: 'Staatliches', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #29161f;
+}
+
+.headerTitle2 {
+    position: absolute;
+    top: 27%;
+    font-size: 40px;
+    color: #29161f
+}
+
+.headerTitle1 {
+    position: absolute;
+    top: 32%;
+    font-size: 100px;
+    color: #29161f
+}
+
+.headerImg {
+    width: 100%;
+    max-height: 300px;
+}
