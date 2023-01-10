@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
+const auth = require("./src/auth")
 
 dotenv.config();
 app.use(express.json())
@@ -12,6 +13,9 @@ mongoose.connect(process.env.MONGO_URL, {
 })
 .then(console.log("MongoDB Connected"))
 .catch((err) => console.log(err));
+
+
+application.use("/auth", auth);
 
 app.use("/", (req, res) => {
     console.log("this is the home")
