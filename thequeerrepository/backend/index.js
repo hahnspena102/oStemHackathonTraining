@@ -14,9 +14,6 @@ mongoose.connect(process.env.MONGO_URL, {
 .then(console.log("MongoDB Connected"))
 .catch((err) => console.log(err));
 
-
-application.use("/auth", auth);
-
 app.use("/", (req, res) => {
     console.log("this is the home")
 }) 

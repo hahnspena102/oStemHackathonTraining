@@ -1,5 +1,6 @@
 import React from 'react'
 import "./navbar.css"
+import { Link } from "react-router-dom";
 
 export default function NavBar() {
 
@@ -8,21 +9,25 @@ export default function NavBar() {
             <div className="topLeft"> </div>
             <div className="topCenter"> 
             <ul className="topNavList">
-            <li className="navListItem Home">
-                Home
-            </li>
-            <li className="navListItem About">
-                Contact
-            </li>
-            <li className="navListItem Contact">
-                Contact
-            </li>
-            <li className="navListItem Post">
-                Post
-            </li>
-            <li className="navListItem Logout">
-                Logout
-            </li>
+                <li className="navListItem Home">
+                    <Link className="link" to="/">
+                        Home
+                    </Link>
+                </li>
+                <li className="navListItem About">
+                        About
+                </li>
+                <li className="navListItem Contact">
+                        Contact
+                </li>
+                <li className="navListItem Post">
+                    <Link className="link" to="/write">
+                        Write
+                    </Link>
+                </li>
+                <li className="navListItem Logout">
+                    Logout
+                </li>
             
             </ul>
             
@@ -33,10 +38,14 @@ export default function NavBar() {
 
             <ul>
                 <li className="navListItem Logout">
-                    Login
+                    <Link className="link" to="/login">
+                        Login
+                    </Link>
                 </li>
                 <li className="navListItem CreateAccount">
-                    Create Account
+                    <Link className="link" to="/createAccount">
+                        Create Account
+                    </Link>
                 </li>
             </ul>
 
