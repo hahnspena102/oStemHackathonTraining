@@ -3,6 +3,8 @@ const app = express();
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const auth = require("./src/auth")
+const users = require("./src/users");
+
 
 dotenv.config();
 app.use(express.json())
@@ -14,9 +16,13 @@ mongoose.connect(process.env.MONGO_URL, {
 .then(console.log("MongoDB Connected"))
 .catch((err) => console.log(err));
 
+app.use("/auth", auth);
+app.use("/users", users);
+
 app.use("/", (req, res) => {
     console.log("this is the home")
 }) 
 app.listen("3001", () => {
     console.log("Backend is running.")
 })
+
